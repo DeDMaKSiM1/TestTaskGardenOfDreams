@@ -5,8 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerInputReader : MonoBehaviour
 {
-    [SerializeField] private Player _player;
-
+    private Player _player;
     private PlayerInputAction _inputAction;
     private Vector2 _movement;
 
@@ -17,6 +16,8 @@ public class PlayerInputReader : MonoBehaviour
         _inputAction.Player.Move.canceled += OnMove;
 
         _inputAction.Player.Attack.performed += OnAttack;
+
+        _player = GetComponent<Player>();
     }
 
     private void OnEnable()
