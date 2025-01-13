@@ -36,8 +36,7 @@ public class Player : MonoBehaviour
     }
     public void SetDirection(Vector2 direction)
     {
-        _direction = direction;
-        Debug.Log(direction);
+        _direction = direction; 
     }
     private void MoveAnimationCheck()
     {
